@@ -1,0 +1,31 @@
+.grid {
+  display: flex;
+  flex-direction: column;
+  padding: $gutter;
+  border: 0px solid transparent;
+  border-radius: 1%;
+  background: $board-color;
+}
+
+.grid__row {
+  display: flex;
+  width: 100%;
+  margin-bottom: $gutter;
+}
+
+.grid__row:last-child {
+  margin-bottom: 0;
+}
+
+.grid__cell {
+  position: relative;
+  width: $tile-size;
+  height: $tile-size;
+  margin-right: $gutter;
+  border-radius: 3%;
+  background: $box-color;
+}
+
+.grid__cell:last-child {
+  margin-right: 0;
+}

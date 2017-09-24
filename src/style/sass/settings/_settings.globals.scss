@@ -1,0 +1,36 @@
+/*
+ * Colors
+ */
+
+$button-color: #8f7a66;
+$bg-color: #faf8ef;
+$board-color: #bbada0;
+$box-color: #cdc1b4;
+$font-dark: #776e65;
+$font-light: #f9f6f2;
+$tile-colors:
+  $font-dark #eee4da,
+  $font-dark #ede0c8,
+  $font-light #f2b179,
+  $font-light #f59563,
+  $font-light #f67c5f,
+  $font-light #f65e3b,
+  $font-light #edcf72,
+  $font-light #edcc61,
+  $font-light #edc850,
+  $font-light #edc53f,
+  $font-light #edc22e;
+
+/*
+ * Durations
+ */
+
+$transition-time: .1s;
+$animation-time: .2s;
+
+/*
+ * Sizes
+ */
+
+$tile-size: 106.25px;
+$gutter: 15px;

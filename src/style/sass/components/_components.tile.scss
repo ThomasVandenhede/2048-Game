@@ -1,0 +1,74 @@
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: $tile-size;
+  height: $tile-size;
+  border-radius: 3%;
+  font-weight: bold;
+  font-family: "Clear Sans";
+  transition: $transition-time all ease;
+  z-index: 10;
+
+  &.is-animating {
+    
+  }
+
+  @for $i from 1 through 11 {
+    $number: pow(2, $i);
+
+    &--value-#{$number} {
+      @if ($number > 999) {
+        font-size: 36px;
+      } @else {
+        font-size: 48px;
+      }
+      color: nth(nth($tile-colors, $i), 1);
+      background: nth(nth($tile-colors, $i), 2);
+    }
+  }
+
+  @for $i from 1 through 32 {
+    @for $j from 1 through 32 {
+      &--position-#{$i}-#{$j} {
+        top: $gutter + ($tile-size + $gutter) * ($i - 1);
+        left: $gutter + ($tile-size + $gutter) * ($j - 1);
+      }
+    }
+  }
+
+  &--new {
+    animation: appear $animation-time ease $transition-time backwards;
+  }
+
+  &--merged {
+    animation: pop $animation-time ease $transition-time backwards;
+    z-index: 20;
+  }
+}

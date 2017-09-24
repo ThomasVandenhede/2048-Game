@@ -1,0 +1,47 @@
+.scoreboard {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  
+  .score-container,
+  .best-container,
+  .new {
+    font-family: 'Clear Sans';
+    font-weight: bold;
+  }
+  
+  .score-container,
+  .best-container {
+    height: 100%;
+    margin-right: 4.8px;
+    padding: 0 12px;
+    background: $board-color;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    
+    h2 {
+      margin: 6px 0 0 0;
+      color: #eee4da;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+    
+    p {
+      margin: 0;
+      padding: 0 26px;
+    }
+  }
+  
+  .new {
+    width: 128.8px;
+    height: 40px;
+    background: $button-color;
+    margin-bottom: 4px;
+    margin-left: auto;
+    border: none;
+    border-radius: 5px;
+    color: $font-light;
+  }
+}

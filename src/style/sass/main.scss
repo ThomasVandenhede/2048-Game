@@ -1,0 +1,26 @@
+// SETTINGS
+@import 'settings/settings.globals';
+
+// TOOLS
+@import 'tools/tools.functions';
+
+// COMPONENTS
+@import 'components/components.scoreboard';
+@import 'components/components.tile';
+@import 'components/components.grid';
+@import 'components/components.game';
+
+:root {
+  --board-rows: 4;
+  --board-cols: 4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

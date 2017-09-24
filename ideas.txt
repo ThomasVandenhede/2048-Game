@@ -1,0 +1,9 @@
+Don't represent tiles as a grid in state, instead store each tile with its position.
+
+When an arrow key is pressed:
+	First, determine if a move can be made and, if so, proceed.
+	Secondly, find and remove all previously merged tiles and keep only the "top" tiles while turning merged tiles into regular tiles.
+	Thirdly, move all tiles accordingly and make adjacent tiles with same value overlap.
+	Finally, update state with ALL tiles, keeping top AND bottom tiles (the ones that got merged, aka two "2" tiles merged into one "4" tile).
+	
+	REPEAT
